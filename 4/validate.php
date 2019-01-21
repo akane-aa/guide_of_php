@@ -23,7 +23,7 @@ input{margin: 5px;}
       if(isset($err)){
         echo $err;
       }else{
-        echo 'あなたの好きな映画は'.$movie'です'
+        echo 'あなたの好きな映画は'.$movie'です';
       }
       ?>
     </p>
