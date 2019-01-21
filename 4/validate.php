@@ -1,11 +1,18 @@
 <?php
+
 //POST内容を習得し、入力値が正しいか検証する。
+$movie = '';
+
+if($_SERVER['REQUEST_METHOD'] === 'POST'){
+
+
 $movie = $_POST['movie'];
 
 if(mb_strlen($movie) === 0){
   $err = '文字を入力してください';
 }elseif(mb_strlen($movie) > 20){
   $err = '20文字以内で入力してください';
+}
 }
 ?>
 <html>
@@ -23,7 +30,7 @@ input{margin: 5px;}
       if(isset($err)){
         echo $err;
       }else{
-        echo 'あなたの好きな映画は'.$movie'です';
+        echo 'あなたの好きな映画は'.$movie.'です';
       }
       ?>
     </p>
